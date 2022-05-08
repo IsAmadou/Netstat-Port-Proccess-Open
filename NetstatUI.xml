@@ -1,0 +1,437 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NetstatUI</name>
+    </assembly>
+    <members>
+        <member name="P:NetstatUI.AdaptersTable.Adapters">
+            <summary>
+            Liste des interfaces réseaux
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:NetstatUI.AdaptersTable.GetAdapter(System.Int32)">
+            <summary>
+            Renvoie une interface à partir de son Index (qui n'est pas forcément consécutif)
+            </summary>
+            <param name="dwIndex"></param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:NetstatUI.AdaptersTable.#ctor">
+            <summary>
+            Lit la table des adresses
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:NetstatUI.ArpTable.ArpFlags">
+            <summary>
+            Type d'entrée de la table ARP
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:NetstatUI.ArpTable.ArpEntry">
+            <summary>
+            Une entrée de la table ARP
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.ArpTable.ArpEntry.Address">
+            <summary>
+            Adresse IP distante
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.ArpTable.ArpEntry.RelatedInterface">
+            <summary>
+            Interface sur laquelle les adresses IP et MAC sont accessibles directement
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.ArpTable.ArpEntry.MacAddress">
+            <summary>
+            Adresse MAC distante
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.ArpTable.ArpEntry.Flags">
+            <summary>
+            Type d'entrée ARP
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.ArpTable.ArpEntries">
+            <summary>
+            Liste des entrées de la table ARP
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:NetstatUI.ArpTable.#ctor(NetstatUI.AdaptersTable)">
+            <summary>
+            Lit la table ARP
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:NetstatUI.InterfaceIPTable.InterfaceAddressFlag">
+            <summary>
+            Type d'adresse
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:NetstatUI.InterfaceIPTable.InterfaceIPEntry">
+            <summary>
+            Une entrée d'adresse IP des interfaces
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.InterfaceIPTable.InterfaceIPEntry.Address">
+            <summary>
+            Adresse IP de l'interface
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.InterfaceIPTable.InterfaceIPEntry.Mask">
+            <summary>
+            Masque du sous réseau de l'adresse IP
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.InterfaceIPTable.InterfaceIPEntry.Flags">
+            <summary>
+            Type d'adresse IP
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.InterfaceIPTable.InterfaceIPEntry.ReassembleSize">
+            <summary>
+            Taille de la fenêtre de réassemblage des paquets reçu par cette IP
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.InterfaceIPTable.InterfaceIPEntry.RelatedInterface">
+            <summary>
+            Interface relative de cette adresse IP
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.InterfaceIPTable.InterfacesIPs">
+            <summary>
+            Liste des adresses IP des interfaces
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:NetstatUI.InterfaceIPTable.#ctor(NetstatUI.AdaptersTable)">
+            <summary>
+            Lit la table des adresses IP des interfaces
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:NetstatUI.OpenedPortsTable.TcpState">
+            <summary>
+            Etat d'une connexion TCP
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:NetstatUI.OpenedPortsTable.TcpEntry">
+            <summary>
+            Une connexion TCP
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.OpenedPortsTable.TcpEntry.State">
+            <summary>
+            Etat de la connexion
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.OpenedPortsTable.TcpEntry.RemoteEndPoint">
+            <summary>
+            Adresse IP et port distants
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.OpenedPortsTable.TcpEntry.LocalEndPoint">
+            <summary>
+            Adresse IP et port locaux
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.OpenedPortsTable.TcpEntry.ProcessID">
+            <summary>
+            PID du processus qui a initié cette connexion
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.OpenedPortsTable.TcpEntry.ProcessName">
+            <summary>
+            Nom du processus qui a initié la connexion
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:NetstatUI.OpenedPortsTable.TcpEntry.Close">
+            <summary>
+            Ferme la connexion de force
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:NetstatUI.OpenedPortsTable.TcpEntry.CompareTo(NetstatUI.OpenedPortsTable.TcpEntry)">
+            <summary>
+            Compare deux connections TCP
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:NetstatUI.OpenedPortsTable.UdpEntry">
+            <summary>
+            Une connexion UDP
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.OpenedPortsTable.UdpEntry.LocalEndPoint">
+            <summary>
+            Adresse IP et port d'écoute local
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.OpenedPortsTable.UdpEntry.ProcessID">
+            <summary>
+            PID du processus ayant initié l'ouverture du port UDP
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.OpenedPortsTable.UdpEntry.ProcessName">
+            <summary>
+            Processus ayant initié l'ouverture du port UDP
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:NetstatUI.OpenedPortsTable.UdpEntry.CompareTo(NetstatUI.OpenedPortsTable.UdpEntry)">
+            <summary>
+            Compare deux connexions UDP
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.OpenedPortsTable.TCPTable">
+            <summary>
+            Liste des entrées de la table TCP
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.OpenedPortsTable.UDPTable">
+            <summary>
+            Liste des entrées de la table UDP
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:NetstatUI.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:NetstatUI.RouteTable.ForwardType">
+            <summary>
+            Type de route
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:NetstatUI.RouteTable.ForwardProtocol">
+            <summary>
+            Protocole qui a inscrit la route dans la table
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:NetstatUI.RouteTable.ForwardEntry">
+            <summary>
+            Une entrée de routage
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.RouteTable.ForwardEntry.Destination">
+            <summary>
+            Adresse du réseau de destination de la route
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.RouteTable.ForwardEntry.Mask">
+            <summary>
+            Masque de sous réseau du réseau de destination de la route
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.RouteTable.ForwardEntry.Policy">
+            <summary>
+            Règle de la route
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.RouteTable.ForwardEntry.NextHop">
+            <summary>
+            Adresse du prochain saut pour atteindre le réseau de destination de la route
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.RouteTable.ForwardEntry.RelatedInterface">
+            <summary>
+            Interface qui mène vers le réseau de destination
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.RouteTable.ForwardEntry.ForwardType">
+            <summary>
+            Type de route
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.RouteTable.ForwardEntry.Protocol">
+            <summary>
+            Protocole de routage ayant fourni cette route
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.RouteTable.ForwardEntry.Age">
+            <summary>
+            Age de la route dans la table de routage
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.RouteTable.ForwardEntry.NextHopAS">
+            <summary>
+            numéro du système autonome de la route
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.RouteTable.ForwardEntry.Metric1">
+            <summary>
+            Première métrique de la route
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.RouteTable.ForwardEntry.Metric2">
+            <summary>
+            Autre métrique de la route
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.RouteTable.ForwardEntry.Metric3">
+            <summary>
+            Autre métrique de la route
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.RouteTable.ForwardEntry.Metric4">
+            <summary>
+            Autre métrique de la route
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.RouteTable.ForwardEntry.Metric5">
+            <summary>
+            Autre métrique de la route
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="P:NetstatUI.RouteTable.ForwardEntries">
+            <summary>
+            Liste des entrées de la table de routage
+            </summary>
+            <value></value>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:NetstatUI.RouteTable.#ctor(NetstatUI.AdaptersTable)">
+            <summary>
+            Récupère la table de routage du système
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="T:My.Resources">
+            <summary>
+              Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+            </summary>
+        </member>
+        <member name="P:My.Resources.ResourceManager">
+            <summary>
+              Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+            </summary>
+        </member>
+        <member name="P:My.Resources.Culture">
+            <summary>
+              Remplace la propriété CurrentUICulture du thread actuel pour toutes
+              les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+            </summary>
+        </member>
+    </members>
+</doc>
